@@ -1,4 +1,23 @@
-// script.js
+function randomWifu() {
+    // Define the probabilities for each randomWifu (adjust as needed)
+    const probabilities = {
+        'roxy': 0.50,
+        'selfy': 0.50,
+    };
+    
+    // Generate a random number between 0 and 1
+    const randomNumber = Math.random(); // Generate a truly random number
+
+    // Select a randomWifu based on the cumulative probabilities
+    let cumulativeProbability = 0;
+    for (const [randomWifu, probability] of Object.entries(probabilities)) {
+        cumulativeProbability += probability;
+        if (randomNumber <= cumulativeProbability) {
+            return randomWifu;
+        }
+    }
+}
+
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
 
@@ -8,47 +27,61 @@ playButton.addEventListener('click', function() {
   videoPlayer.play();
 });
 
-function randomLetter() {
-    // Define the probabilities for each letter (adjust as needed)
-    const probabilities = {
-        'a': 0.25, // 25% chance
-        'b': 0.15, // 15% chance
-        'c': 0.10, // 10% chance
-        'd': 0.10, // 10% chance
-        'e': 0.10, // 10% chance
-        'f': 0.05, // 5% chance
-        'g': 0.05, // 5% chance
-        'h': 0.05, // 5% chance
-        'i': 0.05, // 5% chance
-        'j': 0.05, // 5% chance
-        'k': 0.05, // 5% chance
-        'l': 0.05, // 5% chance
-        'm': 0.05, // 5% chance
-        'n': 0.05, // 5% chance
-        'o': 0.05, // 5% chance
-        'p': 0.05, // 5% chance
-        'q': 0.02, // 2% chance
-        'r': 0.02, // 2% chance
-        's': 0.02, // 2% chance
-        't': 0.02, // 2% chance
-        'u': 0.02, // 2% chance
-        'v': 0.02, // 2% chance
-        'w': 0.02, // 2% chance
-        'x': 0.02, // 2% chance
-        'y': 0.02, // 2% chance
-        'z': 0.02  // 2% chance
-    };
+// Function to handle the end of the video
+function handleVideoEnd() {
+    console.log('Video ended. Handling event...');
+
+    // Hide the video player
+    videoPlayer.style.display = 'none';
+
+    // Generate a random wifu
+    let gg = randomWifu();
+    console.log('Random wifu:', gg);
+
+    // Set the background image URL
+    document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+
+    // Create image elements for wifu and gif
+    let image = document.createElement('img');
+    image.src = `../your wifu is runnig from u/imag/${gg}.png`;
     
-    // Generate a random number between 0 and 1
-    const randomNumber = Math.random();
-    console.log(randomNumber)
-    // Select a letter based on the cumulative probabilities
-    let cumulativeProbability = 0;
-    for (const [letter, probability] of Object.entries(probabilities)) {
-        cumulativeProbability += probability;
-        if (randomNumber <= cumulativeProbability) {
-            return letter;
-        }
-    }
+    let gifImage = document.createElement('img');
+    gifImage.src = `../your wifu is runnig from u/gif/${gg}.gif`;
+    gifImage.style.position = 'absolute';
+    gifImage.style.top = '50px';
+    gifImage.style.left = '50px';
+    gifImage.style.width = '200px';
+
+    // Append the image elements to the body
+    document.body.appendChild(image);
+    document.body.appendChild(gifImage);
+
+    // Create the "Try Again" button
+    let tryAgainButton = document.createElement('button');
+    tryAgainButton.textContent = 'Try Again';
+    tryAgainButton.addEventListener('click', function() {
+        // Remove the existing wifu, gif images, and the "Try Again" button
+        document.body.removeChild(image);
+        document.body.removeChild(gifImage);
+        document.body.removeChild(tryAgainButton);
+
+        // Reset the process
+        playButton.style.display = 'block';
+        document.body.style.backgroundImage = 'url("696c1346c27df162ecd95129ff4ea552.jpg")';
+
+        // Show the video player again
+        videoPlayer.style.display = 'none';
+
+        // Add event listener for the video end again
+        videoPlayer.addEventListener('ended', handleVideoEnd);
+    });
+
+    // Append the "Try Again" button to the body
+    document.body.appendChild(tryAgainButton);
+
+    // Remove the event listener for the video end
+    videoPlayer.removeEventListener('ended', handleVideoEnd);
 }
 
+// Add event listener for the video end
+videoPlayer.addEventListener('ended', handleVideoEnd);
