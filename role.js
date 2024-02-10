@@ -37,9 +37,14 @@ function handleVideoEnd() {
     // Generate a random wifu
     let gg = randomWifu();
     console.log('Random wifu:', gg);
-
     // Set the background image URL
-    document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+
+  document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.gif")`;
+
+       
+      
+
+
 
     // Create image elements for wifu and gif
     let image = document.createElement('img');
