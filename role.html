@@ -3,51 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rols.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <title>Background Video</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-image: url("696c1346c27df162ecd95129ff4ea552.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    #playButton {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 15px 25px;
-      font-size: 18px;
-      background-color: rgba(255, 255, 255, 0.7);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #videoPlayer {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1; /* Ensure video is behind other content */
-    }
-  </style>
 </head>
 <body>
-  <button id="playButton">UwU</button>
+  <button id="playButton" class='animate__animated animate__bounce animate__infinite	'>UwU></button>
   <video   autoplay id="videoPlayer">
     <source src="../your wifu is runnig from u/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
+
   <script src="role.js"></script>
 
 

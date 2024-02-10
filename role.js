@@ -44,14 +44,14 @@ function handleVideoEnd() {
     // Create image elements for wifu and gif
     let image = document.createElement('img');
     image.src = `../your wifu is runnig from u/imag/${gg}.png`;
-    
+     image.classList.add('animate__animated', 'animate__fadeInBottomRight');
     let gifImage = document.createElement('img');
     gifImage.src = `../your wifu is runnig from u/gif/${gg}.gif`;
     gifImage.style.position = 'absolute';
     gifImage.style.top = '50px';
     gifImage.style.left = '50px';
     gifImage.style.width = '200px';
-
+    gifImage.classList.add('animate__animated', 'animate__fadeInBottomRight');
     // Append the image elements to the body
     document.body.appendChild(image);
     document.body.appendChild(gifImage);
@@ -59,6 +59,9 @@ function handleVideoEnd() {
     // Create the "Try Again" button
     let tryAgainButton = document.createElement('button');
     tryAgainButton.textContent = 'Try Again';
+    // Add the CSS class to the tryAgainButton element
+     tryAgainButton.classList.add('try-again-button');
+
     tryAgainButton.addEventListener('click', function() {
         // Remove the existing wifu, gif images, and the "Try Again" button
         document.body.removeChild(image);
