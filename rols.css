@@ -5,9 +5,8 @@ body {
     background-image: url("696c1346c27df162ecd95129ff4ea552.jpg");
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-repeat: no-repeat;
+
   }
   
   #playButton {
@@ -36,12 +35,34 @@ body {
   }
 .try-again-button{
     padding: 20px;
-    font-size: 28px;
+    font-size: 20px;
     position: absolute;
     bottom: 1%;
-    width: 200px;
+    width: 150px;
     background-color: transparent;
     color: brown;
-    border-radius: 6px;
-    border-color: aqua;
+    border-radius:16px;
+   border: 1px solid black;
+}
+
+.main{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row; 
+  height:600px;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.image{
+  width: 350px;
+  padding: 0;
+}
+.wifu-name{
+  color : rgb(101, 8, 67);
+  font-size: 44px;
+  font-family:'fantasy';
+  text-decoration: underline;
+
 }
