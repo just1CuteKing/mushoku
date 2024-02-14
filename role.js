@@ -1,8 +1,7 @@
 function randomWifu() {
   const probabilities = {
-    aisha: 0.05,
-    anne: 0.05,
-    ariel: 0.05,
+    aisha: 1,
+    ariel: 0,
     atoferatofe: 0.05,
     benedict: 0.05,
     bloodyKant: 0.05,
@@ -30,7 +29,7 @@ function randomWifu() {
     sylphiette: 0.05,
     zenith: 0.05,
   };
-  
+
     const randomNumber = Math.random();
     let cumulativeProbability = 0;
     for (const [randomWifu, probability] of Object.entries(probabilities)) {
@@ -62,6 +61,7 @@ const image2 = document.createElement('img');
 const image3 = document.createElement('img');
 const gifImage = document.createElement('img');
 const tryAgainButton = document.createElement('button');
+const videoPlayer02 = document.getElementById('videoPlayer02');
   
 function resetGame() {
     div3.removeChild(image);
@@ -73,17 +73,13 @@ function resetGame() {
 
     playButton.style.display = 'block';
     document.body.style.backgroundImage = 'url("696c1346c27df162ecd95129ff4ea552.jpg")';
-
+    videoPlayer02.currentTime = 0
+    videoPlayer02.pause();
+    videoPlayer02.style.visibility = 'hidden'
     videoPlayer.addEventListener('ended', handleVideoEnd);
   };
 
-  if (gg === 'roxy') {
-    image2.src = '';
-    image3.src = '';
-}else if (gg === 'eris') {
-  image.src = '';
-  image3.src = '';
-}
+  
   
 function handleVideoEnd(){
   
@@ -97,6 +93,7 @@ function handleVideoEnd(){
   
     name.textContent = `${gg}`;
     name.classList.add('wifu-name');
+    name.classList.add('animate__animated', 'animate__shakeY','animate__infinite' )
   
     image.src = `../your wifu is runnig from u/imag/${gg}/${gg}.png`;
     image2.src = `../your wifu is runnig from u/imag/${gg}/${gg}2.png`;
@@ -111,6 +108,30 @@ function handleVideoEnd(){
     gifImage.style.padding = '0';
     gifImage.style.backgroundRepeat = 'no-repeat';
     gifImage.classList.add('animate__animated', 'animate__fadeInBottomRight');
+
+    if (gg === 'roxy') {
+      image2.src = '';
+      image3.src = '';
+    }else if (gg === 'eris') {
+    image.src = '';
+    image3.src = '';
+    }
+     if (gg === 'ariel') {
+    gifImage.src = ``;
+    document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+    document.body.classList.add('body')
+    }
+     if(gg === 'aisha'){
+      image.src = '';
+      image2.src = '';
+      image3.src = '';
+      gifImage.src = ``;
+      document.body.style.backgroundImage = ``;
+      videoPlayer02.style.display = 'block';
+      videoPlayer02.style.visibility = 'visible'
+      videoPlayer02.play();
+
+    }
   
     div.appendChild(gifImage);
     div2.appendChild(name);
@@ -127,3 +148,4 @@ function handleVideoEnd(){
     document.body.appendChild(tryAgainButton);
 }   
 videoPlayer.addEventListener('ended', handleVideoEnd);
+
