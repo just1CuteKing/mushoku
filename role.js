@@ -3,14 +3,13 @@ function randomWifu() {
     aisha: 0.05,
     ariel: 0.05,
     elinalise: 0.05,
-    eris: 0.5,
+    eris: 0.05,
     ghislaine: 0.05,
-    hilda: 1,
+    hilda: 0.05,
     juliette: 0.05,
     kishirika: 0.05,
     lilia: 0.05,
     linia: 0.05,
-    miko: 0.05,
     nanahoshi: 0.05,
     nina: 0.05,
     norn: 0.05,
@@ -105,7 +104,7 @@ function handleVideoEnd(){
     if (gg === 'roxy' ) {
       image2.src = '';
       image3.src = '';
-    }else if (gg === 'eris'|| gg === 'elinalise') {
+    }else if (gg === 'eris'|| gg === 'elinalise' || gg ==='juliette') {
     image.src = '';
     image3.src = '';
     gifImage.src ='';
@@ -125,7 +124,7 @@ function handleVideoEnd(){
       videoPlayer02.style.visibility = 'visible'
       videoPlayer02.play();
     }
-    if(gg === 'ghislaine'){
+    if(gg === 'ghislaine' || gg === 'kishirika'){
       image.src ='';
       image2.src ='';
       image3.src ='';
