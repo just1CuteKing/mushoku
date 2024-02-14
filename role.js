@@ -1,9 +1,36 @@
 function randomWifu() {
-    const probabilities = {
-      roxy: 0.33, // 30% chance
-      selfy: 0.33,// 30% 
-      eris : 0.33
-    };  
+  const probabilities = {
+    aisha: 0.05,
+    anne: 0.05,
+    ariel: 0.05,
+    atoferatofe: 0.05,
+    benedict: 0.05,
+    bloodyKant: 0.05,
+    christina: 0.05,
+    claire: 0.05,
+    dora: 0.05,
+    elinalise: 0.05,
+    eris: 0.05,
+    ghislaine: 0.05,
+    ginger: 0.05,
+    hilda: 0.05,
+    juliette: 0.05,
+    kishirika: 0.05,
+    lilia: 0.05,
+    linia: 0.05,
+    miko: 0.05,
+    nanahoshi: 0.05,
+    nina: 0.05,
+    norn: 0.05,
+    pursena: 0.05,
+    rokari: 0.05,
+    roxy: 0.05,
+    sara: 0.05,
+    suzanne: 0.05,
+    sylphiette: 0.05,
+    zenith: 0.05,
+  };
+  
     const randomNumber = Math.random();
     let cumulativeProbability = 0;
     for (const [randomWifu, probability] of Object.entries(probabilities)) {
