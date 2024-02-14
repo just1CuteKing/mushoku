@@ -1,18 +1,11 @@
 function randomWifu() {
   const probabilities = {
-    aisha: 1,
-    ariel: 0,
-    atoferatofe: 0.05,
-    benedict: 0.05,
-    bloodyKant: 0.05,
-    christina: 0.05,
-    claire: 0.05,
-    dora: 0.05,
+    aisha: 0.05,
+    ariel: 0.05,
     elinalise: 0.05,
-    eris: 0.05,
+    eris: 0.5,
     ghislaine: 0.05,
-    ginger: 0.05,
-    hilda: 0.05,
+    hilda: 1,
     juliette: 0.05,
     kishirika: 0.05,
     lilia: 0.05,
@@ -109,12 +102,13 @@ function handleVideoEnd(){
     gifImage.style.backgroundRepeat = 'no-repeat';
     gifImage.classList.add('animate__animated', 'animate__fadeInBottomRight');
 
-    if (gg === 'roxy') {
+    if (gg === 'roxy' ) {
       image2.src = '';
       image3.src = '';
-    }else if (gg === 'eris') {
+    }else if (gg === 'eris'|| gg === 'elinalise') {
     image.src = '';
     image3.src = '';
+    gifImage.src ='';
     }
      if (gg === 'ariel') {
     gifImage.src = ``;
@@ -130,8 +124,20 @@ function handleVideoEnd(){
       videoPlayer02.style.display = 'block';
       videoPlayer02.style.visibility = 'visible'
       videoPlayer02.play();
-
     }
+    if(gg === 'ghislaine'){
+      image.src ='';
+      image2.src ='';
+      image3.src ='';
+    
+    }
+    if(gg === 'hilda'){
+      image.src ='';
+      image3.src ='';
+      gifImage.src ='';
+    document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+    }
+    
   
     div.appendChild(gifImage);
     div2.appendChild(name);
