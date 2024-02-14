@@ -74,6 +74,7 @@ function handleVideoEnd(){
         image2.src = '';
         image3.src = '';
     }
+
     gifImage.src = `../your wifu is runnig from u/gif/${gg}.gif`;
     gifImage.style.width = '300px';
     gifImage.style.padding = '0';
