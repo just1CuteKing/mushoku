@@ -2,10 +2,8 @@ function randomWifu() {
     const probabilities = {
       roxy: 0.5, // 50% chance
       selfy: 0.5 // 50% chance
-    };
-  
+    };  
     const randomNumber = Math.random();
-  
     let cumulativeProbability = 0;
     for (const [randomWifu, probability] of Object.entries(probabilities)) {
       cumulativeProbability += probability;
@@ -14,17 +12,17 @@ function randomWifu() {
       }
     }
 }
+
+const playButton = document.getElementById('playButton');
+const videoPlayer = document.getElementById('videoPlayer');
+const nono = document.querySelector('.nono')
   
-  const playButton = document.getElementById('playButton');
-  const videoPlayer = document.getElementById('videoPlayer');
-  
-  playButton.addEventListener('click', function () {
+playButton.addEventListener('click', function () {
     playButton.style.display = 'none';
     videoPlayer.style.display = 'block';
     videoPlayer.play();
   });
 
-  
 const div = document.querySelector('.F-div');
 const div2 = document.querySelector('.S-div');
 const div3 = document.querySelector('.T-div');
@@ -37,8 +35,6 @@ const image3 = document.createElement('img');
 const gifImage = document.createElement('img');
 const tryAgainButton = document.createElement('button');
   
-
-
 function resetGame() {
     div3.removeChild(image);
     div.removeChild(gifImage);
@@ -53,11 +49,10 @@ function resetGame() {
     videoPlayer.addEventListener('ended', handleVideoEnd);
   };
   
-
-  
 function handleVideoEnd(){
-    videoPlayer.style.display = 'none';
   
+    videoPlayer.style.display = 'none';
+
     const gg = randomWifu();
     console.log('Random wifu:', gg);
   
@@ -91,17 +86,12 @@ function handleVideoEnd(){
     div4.appendChild(image2);
     div6.appendChild(image3);
 
-
     tryAgainButton.textContent = 'Try Again';
     tryAgainButton.classList.add('try-again-button');
-
     tryAgainButton.addEventListener('click',resetGame);
-
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {resetGame()}});
-
     document.body.appendChild(tryAgainButton);
 }
-  
 videoPlayer.addEventListener('ended', handleVideoEnd);
