@@ -54,10 +54,20 @@ body {
   width:100%;
   flex-wrap: wrap;
   justify-content:space-between;
+  align-items: center;
 }
 .image{
-  width: 350px;
+  width: 400px;
+ background-size: cover;
   padding: 0;
+}
+.image2{
+  width: 330px;
+  margin-top: 5px;
+}
+.image3{
+width: 400px;
+margin: 2px;
 }
 .wifu-name{
   color : rgb(101, 8, 67);
