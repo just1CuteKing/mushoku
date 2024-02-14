@@ -94,5 +94,5 @@ function handleVideoEnd(){
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {resetGame()}});
     document.body.appendChild(tryAgainButton);
-}
+}   
 videoPlayer.addEventListener('ended', handleVideoEnd);
