@@ -1,7 +1,8 @@
 function randomWifu() {
     const probabilities = {
-      roxy: 0.5, // 50% chance
-      selfy: 0.5 // 50% chance
+      roxy: 0.33, // 30% chance
+      selfy: 0.33,// 30% 
+      eris : 0.33
     };  
     const randomNumber = Math.random();
     let cumulativeProbability = 0;
@@ -15,7 +16,7 @@ function randomWifu() {
 
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
-const nono = document.querySelector('.nono')
+
   
 playButton.addEventListener('click', function () {
     playButton.style.display = 'none';
@@ -48,6 +49,14 @@ function resetGame() {
 
     videoPlayer.addEventListener('ended', handleVideoEnd);
   };
+
+  if (gg === 'roxy') {
+    image2.src = '';
+    image3.src = '';
+}else if (gg === 'eris') {
+  image.src = '';
+  image3.src = '';
+}
   
 function handleVideoEnd(){
   
@@ -69,11 +78,6 @@ function handleVideoEnd(){
     image.classList.add('image');
     image2.classList.add('animate__animated', 'animate__fadeInBottomRight' , 'image2');
     image3.classList.add('animate__animated', 'animate__fadeInBottomRight', 'image3');
-
-   if (gg === 'roxy') {
-        image2.src = '';
-        image3.src = '';
-    }
 
     gifImage.src = `../your wifu is runnig from u/gif/${gg}.gif`;
     gifImage.style.width = '300px';
