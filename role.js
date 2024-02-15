@@ -1,6 +1,6 @@
 function randomWifu() {
   const probabilities = {
-    zenith: 0.05,//done
+   zenith: 0.05,//done
     aisha: 0.05,//done 
     ariel: 0.05,//done
     elinalise: 0.05,//done
@@ -11,15 +11,15 @@ function randomWifu() {
     kishirika: 0.05,//done
     linia: 0.05,//done
     nanahoshi: 0.05,//done
-    norn: 0.05,// done
+    norn: 1,// done
     pursena: 0.05, //done 
     rokari: 0.05,//done
     roxy: 0.05,//done
     suzanne: 0.05,//done
     sylphiette: 0.05,//done
-    lilia: 0.05,// not done yet 
+   /* lilia: 0.05,// not done yet 
     nina: 0.05,// not dont yet
-    sara: 0.05,
+    sara: 0.05,*/
   };
 
     const randomNumber = Math.random();
@@ -139,17 +139,18 @@ function handleVideoEnd(){
       gifImage.src ='';
     document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
     }
-    if(gg === 'norn'|| gg === 'rokari'){
-    gifImage.src = '';
-    }
     if(gg === 'norn'){
       gifImage.src = '';
       image3.src=''
+
       }
     if( gg === 'rokari'){
       gifImage.src = '';
       image.src ='';
       }
+      if( gg === 'nanahoshi'){
+        image.src ='';
+        }
 
     div.appendChild(gifImage);
     div2.appendChild(name);

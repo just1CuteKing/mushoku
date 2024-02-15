@@ -4,9 +4,9 @@ body {
     height: 100vh;
     background-image: url("696c1346c27df162ecd95129ff4ea552.jpg");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    background-position: center;
 
   }
 
@@ -60,14 +60,14 @@ body {
 
 .main{
   margin: 0;
-  padding: 0;
+  padding: 5px;
   display: flex;
   flex-direction: row; 
   height:600px;
   width:100%;
   flex-wrap: wrap;
   justify-content:space-between;
-  align-items: center;
+  align-items: top;
 }
 .image{
   width: 400px;
@@ -77,11 +77,13 @@ body {
 .image2{
   width: 330px;
   background-size: cover;
-  margin-top: 5px;
+  margin-top: 15px;
+
 }
 .image3{
-width: 400px;
+width: 380px;
 background-size: cover;
+color: transparent;
 }
 .wifu-name{
   color : rgb(101, 8, 67);
