@@ -48,9 +48,9 @@ playButton.addEventListener('click', function () {
     videoPlayer.style.display = 'block';
     videoPlayer.play();
     
-console.log(randomWifu())
   });
 
+const main = document.getElementById("myElement");
 const div = document.querySelector('.F-div');
 const div2 = document.querySelector('.S-div');
 const div3 = document.querySelector('.T-div');
@@ -157,12 +157,22 @@ function handleVideoEnd(){
                          }else if(gg == 'linia'){
                               image.src ='';
                            }
+if(image.src === '' && image3.src ===''){
+  const containerWidth = window.innerWidth;
+  const elementWidth = main.offsetWidth;
+  const leftPosition = (containerWidth - elementWidth) / 2;
+  main.style.position = 'absolute'
+  main.style.left = leftPosition + "px";
+}
 
     div.appendChild(gifImage);
     div2.appendChild(name);
     div3.appendChild(image);
     div4.appendChild(image2);
     div6.appendChild(image3);
+    if(image.src === '' && image3.src ===''){
+     
+    }
 
     tryAgainButton.textContent = 'Try Again';
     tryAgainButton.classList.add('try-again-button');
