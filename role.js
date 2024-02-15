@@ -1,5 +1,6 @@
 function randomWifu() {
   const probabilities = {
+    zenith: 0.5,//done
     aisha: 0.05,//done 
     ariel: 0.05,//done
     elinalise: 0.05,//done
@@ -8,18 +9,17 @@ function randomWifu() {
     hilda: 0.05,//done
     juliette: 0.05,//done
     kishirika: 0.05,//done
-    lilia: 0.05,// not done yet 
     linia: 0.05,//done
     nanahoshi: 0.05,//done
-    nina: 0.05,// not dont yet
     norn: 0.05,// done
     pursena: 0.05, //done 
     rokari: 0.05,//done
     roxy: 0.05,//done
-    sara: 0.05,
-    suzanne: 0.05,
+    suzanne: 0.05,//done
     sylphiette: 0.05,//done
-    zenith: 0.05,
+    lilia: 0.05,// not done yet 
+    nina: 0.05,// not dont yet
+    sara: 0.05,
   };
 
     const randomNumber = Math.random();
@@ -101,11 +101,16 @@ function handleVideoEnd(){
     gifImage.style.backgroundRepeat = 'no-repeat';
     gifImage.classList.add('animate__animated', 'animate__fadeInBottomRight');
 
-    if (gg === 'roxy' ) {
+    if (gg === 'roxy' || gg == 'zenith') {
       image2.src = '';
       image3.src = '';
     }else if (gg === 'eris'|| gg === 'elinalise' || gg ==='juliette') {
     image.src = '';
+    image3.src = '';
+    gifImage.src ='';
+    }
+   if(gg ==='juliette') {
+    image2.src ='';
     image3.src = '';
     gifImage.src ='';
     }
@@ -138,7 +143,11 @@ function handleVideoEnd(){
     if(gg === 'norn'|| gg === 'rokari'){
     gifImage.src = '';
     }
-  
+    if( gg === 'rokari'){
+      gifImage.src = '';
+      image.src ='';
+      }
+
     div.appendChild(gifImage);
     div2.appendChild(name);
     div3.appendChild(image);
