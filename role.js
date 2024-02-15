@@ -77,8 +77,7 @@ function resetGame() {
     videoPlayer.addEventListener('ended', handleVideoEnd);
   };
 
-  
-  
+
 function handleVideoEnd(){
   
     videoPlayer.style.display = 'none';
