@@ -1,6 +1,6 @@
 function randomWifu() {
   const probabilities = {
-    zenith: 0.5,//done
+    zenith: 0.05,//done
     aisha: 0.05,//done 
     ariel: 0.05,//done
     elinalise: 0.05,//done
@@ -110,14 +110,13 @@ function handleVideoEnd(){
     gifImage.src ='';
     }
    if(gg ==='juliette') {
-    image2.src ='';
+    image.src ='';
     image3.src = '';
     gifImage.src ='';
     }
      if (gg === 'ariel') {
     gifImage.src = ``;
     document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
-    document.body.classList.add('body')
     }
      if(gg === 'aisha'){
       image.src = '';
@@ -143,6 +142,10 @@ function handleVideoEnd(){
     if(gg === 'norn'|| gg === 'rokari'){
     gifImage.src = '';
     }
+    if(gg === 'norn'){
+      gifImage.src = '';
+      image3.src=''
+      }
     if( gg === 'rokari'){
       gifImage.src = '';
       image.src ='';

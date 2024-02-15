@@ -6,17 +6,10 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 
   }
-.body{
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-  overflow: hidden;
-}
+
   
   #playButton {
     position: absolute;
@@ -83,11 +76,12 @@ body {
 }
 .image2{
   width: 330px;
+  background-size: cover;
   margin-top: 5px;
 }
 .image3{
 width: 400px;
-margin: 2px;
+background-size: cover;
 }
 .wifu-name{
   color : rgb(101, 8, 67);
