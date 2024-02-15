@@ -1,22 +1,22 @@
 function randomWifu() {
   const probabilities = {
-      zenith: 0.05,
-      aisha: 0.05,
-      ariel: 0.05,
-      elinalise: 0.05,
-      eris: 0.05,
-      ghislaine: 0.05,
-      hilda: 0.05,
-      juliette: 0.05,
-      kishirika: 0.05,
-      linia: 0.05,
-      nanahoshi: 0.05,
-      norn: 0.05,
-      pursena: 0.05,
-      rokari: 0.05,
-      roxy: 0.05,
-      suzanne:0.05,
-      sylphiette: 0.05,
+      zenith: 0.02,
+      aisha: 0.02,
+      ariel: 0.02,
+      elinalise: 0.02,
+      eris: 0.02,
+      ghislaine: 0.02,
+      hilda: 0.02,
+      juliette: 0.02,
+      kishirika: 0.02,
+      linia: 0.02,
+      nanahoshi: 0.02,
+      norn: 0.02,
+      pursena: 0.022,
+      rokari: 0.02,
+      roxy: 0.02,
+      suzanne:0.02,
+      sylphiette: 0.02,
       // lilia: 0.05, // not done yet
       // nina: 0.05, // not done yet
       // sara: 0.05, // not done yet
@@ -27,21 +27,18 @@ function randomWifu() {
   console.log('R:'+randomNumber)
   let cumulativeProbability = 0;
 
-  for (const [randomWifu, probability] of Object.entries(probabilities)) {
-      cumulativeProbability += probability;
-      console.log('p:'+probability)
-      console.log('c:'+cumulativeProbability)
-      if (randomNumber < cumulativeProbability) {
-          return randomWifu;
-      }
-  }
-  // If no wifu is selected, return a default or handle it as needed
-  return "pursena";
+  while (randomNumber >= cumulativeProbability) {
+    for (const [randomWifu, probability] of Object.entries(probabilities)) {
+        cumulativeProbability += probability;
+        if (randomNumber < cumulativeProbability) {
+            return randomWifu;
+        }
+    }
+}
 }
 
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
-
   
 playButton.addEventListener('click', function () {
     playButton.style.display = 'none';
@@ -110,25 +107,23 @@ function handleVideoEnd(){
     gifImage.style.backgroundRepeat = 'no-repeat';
     gifImage.classList.add('animate__animated', 'animate__fadeInBottomRight');
 
-  if (gg === 'roxy' || gg == 'zenith') {
+if (gg === 'roxy' || gg == 'zenith') {
       image2.src = '';
       image3.src = '';
-    } else if (gg === 'eris'|| gg === 'elinalise' || gg ==='juliette') {
-          image.src = '';
+    }else if (gg ==='juliette') {
           image3.src = '';
           gifImage.src ='';
-        }else if(gg ==='juliette') {
+       }else if(gg ==='juliette') {
             image.src ='';
             image3.src = '';
             gifImage.src ='';
-          }else if (gg === 'ariel' || gg === 'suzanne') {
+          }else if (gg === 'suzanne') {
               gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
               document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
             }else if (gg === 'ariel') {
                 gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
                 document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
               }else if(gg === 'aisha'){
-                  image.src = '';
                   image2.src = '';
                   image3.src = '';
                   gifImage.src = ``;
@@ -136,34 +131,40 @@ function handleVideoEnd(){
                   videoPlayer02.style.display = 'block';
                   videoPlayer02.style.visibility = 'visible'
                   videoPlayer02.play();
-                }else if(gg === 'ghislaine' || gg === 'kishirika'){
-                    image.src ='';
+                }else if( gg === 'kishirika'){
                     image2.src ='';
                     image3.src ='';
-                  }else if(gg === 'hilda' || gg === 'pursena'){
+                  }else if( gg === 'pursena'){
                       image.src ='';
                       image3.src ='';
                       gifImage.src ='';
                       document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
-                    }else if(gg === 'norn'){
+                    }else if(gg === 'norn' ||gg === 'eris' || gg === 'elinalise'){
                         gifImage.src = '';
                         image3.src=''
-
                       }else if( gg === 'rokari'){
                           gifImage.src = '';
-                          image.src ='';
+                          image3.src ='';
                        }else if( gg === 'nanahoshi'){
                             image.src ='';
-                         }else if(gg == 'linia'){
-                              image.src ='';
-                           }
-if(image.src === '' && image3.src ===''){
-  const containerWidth = window.innerWidth;
-  const elementWidth = main.offsetWidth;
-  const leftPosition = (containerWidth - elementWidth) / 2;
-  main.style.position = 'absolute'
-  main.style.left = leftPosition + "px";
-}
+                         }else if(gg === 'linia'){
+                              image3.src ='';
+                              gifImage.src ='';
+                           }else if(gg === 'kishirika'  || gg === 'ghislaine'){
+                               image2.src = '';
+                               image3.src = ''
+                           }else if(gg === 'sylphiette'){
+                                image3.src = ''
+                             }else if(gg === 'hilda'){
+                                  image3.src ='';
+                                  gifImage.src ='';
+                                  document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                }else if (gg === 'ariel' ) {
+                                      gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
+                                      document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                      image3.src = '';
+                                    }
+
 
     div.appendChild(gifImage);
     div2.appendChild(name);

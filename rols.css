@@ -70,17 +70,23 @@ body {
   align-items: top;
 }
 .image{
+  margin: 0;
+  padding: 0;
   width: 400px;
  background-size: cover;
   padding: 0;
 }
 .image2{
+  margin: 0;
+  padding: 0;
   width: 330px;
   background-size: cover;
   margin-top: 15px;
 
 }
 .image3{
+  margin: 0;
+  padding: 0;
 width: 380px;
 background-size: cover;
 color: transparent;
