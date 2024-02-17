@@ -1,23 +1,23 @@
 function randomWifu() {
   const probabilities = {
-      zenith: 0.02,
-      aisha: 0.02,
-      ariel: 0.02,
-      elinalise: 0.02,
-      eris: 0.02,
-      ghislaine: 0.02,
-      hilda: 0.02,
-      juliette: 0.02,
-      kishirika: 0.02,
-      linia: 0.02,
-      nanahoshi: 0.02,
-      norn: 0.02,
-      pursena: 0.022,
-      rokari: 0.02,
-      roxy: 0.02,
-      suzanne:0.02,
-      sylphiette: 0.02,
-      // lilia: 0.05, // not done yet
+      sylphiette: 0.01,
+      zenith: 0.01,
+      aisha: 0.01,
+      ariel: 0.01,
+      elinalise: 0.01,
+      eris: 0.01,
+      ghislaine: 0.01,
+      hilda: 0.01,
+      juliette: 0.01,
+      kishirika: 0.01,
+      linia: 0.01,
+      nanahoshi: 0.01,
+      norn: 0.01,
+      pursena: 0.01,
+      rokari: 0.01,
+      roxy: 0.01,
+      suzanne:0.01,
+   // lilia: 0.05, // not done yet
       // nina: 0.05, // not done yet
       // sara: 0.05, // not done yet
   };
