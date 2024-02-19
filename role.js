@@ -1,7 +1,7 @@
 function randomWifu() {
   const probabilities = {
       sylphiette: 0.02,
-      zenith: 0.02,
+      zenith: 0.01,
       aisha: 0.01,
       ariel: 0.01,
       elinalise: 0.01,
@@ -18,7 +18,7 @@ function randomWifu() {
       roxy: 0.02,
       suzanne:0.01,
       lilia: 0.01,
-      nina: 0.01, 
+      nina: 0.02, 
       sara: 0.01, 
   };
   const randomNumber = Math.random();
