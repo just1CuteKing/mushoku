@@ -87,22 +87,22 @@ function handleVideoEnd(){
     const gg = randomWifu();
     console.log('Random wifu:', gg);
   
-    document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.gif")`;
+    document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.gif")`;
     document.body.style.backgroundRepeat = 'no-repeat';
   
     name.textContent = `${gg}`;
     name.classList.add('wifu-name');
     name.classList.add('animate__animated', 'animate__shakeY','animate__infinite' )
   
-    image.src = `../your wifu is runnig from u/imag/${gg}/${gg}.png`;
-    image2.src = `../your wifu is runnig from u/imag/${gg}/${gg}2.png`;
-    image3.src = `../your wifu is runnig from u/imag/${gg}/${gg}3.png`;
+    image.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}.png`;
+    image2.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}2.png`;
+    image3.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}3.png`;
     image.classList.add('animate__animated', 'animate__fadeInBottomRight');
     image.classList.add('image');
     image2.classList.add('animate__animated', 'animate__fadeInBottomRight' , 'image2');
     image3.classList.add('animate__animated', 'animate__fadeInBottomRight', 'image3');
 
-    gifImage.src = `../your wifu is runnig from u/gif/${gg}.gif`;
+    gifImage.src = `../your-wifu-is-runnig-from-u/gif/${gg}.gif`;
     gifImage.style.width = '300px';
     gifImage.style.padding = '0';
     gifImage.style.backgroundRepeat = 'no-repeat';
@@ -119,11 +119,11 @@ if (gg === 'roxy' || gg == 'zenith') {
             image3.src = '';
             gifImage.src ='';
           }else if (gg === 'suzanne') {
-              gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
-              document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+              gifImage.src = `../your-wifu-is-runnig-from-u/gif/${gg}.png`;
+              document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`;
             }else if (gg === 'ariel') {
-                gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
-                document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                gifImage.src = `../your-wifu-is-runnig-from-u/gif/${gg}.png`;
+                document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`;
               }else if(gg === 'aisha'){
                   image2.src = '';
                   image3.src = '';
@@ -139,7 +139,7 @@ if (gg === 'roxy' || gg == 'zenith') {
                       image.src ='';
                       image3.src ='';
                       gifImage.src ='';
-                      document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                      document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`;
                     }else if(gg === 'norn' ||gg === 'eris' || gg === 'elinalise'){
                         gifImage.src = '';
                         image3.src=''
@@ -159,10 +159,10 @@ if (gg === 'roxy' || gg == 'zenith') {
                                }else if(gg === 'hilda'){
                                      image3.src ='';
                                      gifImage.src ='';
-                                     document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                     document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`;
                                   }else if (gg === 'ariel' ) {
-                                        gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
-                                        document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                        gifImage.src = `../your-wifu-is-runnig-from-u/gif/${gg}.png`;
+                                        document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`;
                                         image3.src = '';
                                    }else if(gg === 'lilia'){
                                           gifImage.src = '';
@@ -178,7 +178,7 @@ if (gg === 'roxy' || gg == 'zenith') {
                                        }else if(gg === 'sara'){
                                         image3.src = '';
                                         gifImage.src ='';
-                                        document.body.style.backgroundImage =  `url("../your wifu is runnig from u/back-image/back-${gg}.png")`
+                                        document.body.style.backgroundImage =  `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`
                                        }
 
 
