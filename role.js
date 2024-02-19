@@ -1,12 +1,12 @@
 function randomWifu() {
   const probabilities = {
-      sylphiette: 0.01,
-      zenith: 0.01,
+      sylphiette: 0.02,
+      zenith: 0.02,
       aisha: 0.01,
       ariel: 0.01,
       elinalise: 0.01,
-      eris: 0.01,
-      ghislaine: 0.01,
+      eris: 0.02,
+      ghislaine: 0.02,
       hilda: 0.01,
       juliette: 0.01,
       kishirika: 0.01,
@@ -15,16 +15,13 @@ function randomWifu() {
       norn: 0.01,
       pursena: 0.01,
       rokari: 0.01,
-      roxy: 0.01,
+      roxy: 0.02,
       suzanne:0.01,
-   // lilia: 0.05, // not done yet
-      // nina: 0.05, // not done yet
-      // sara: 0.05, // not done yet
+      lilia: 0.01,
+      nina: 0.01, 
+      sara: 0.01, 
   };
-
-
   const randomNumber = Math.random();
-  console.log('R:'+randomNumber)
   let cumulativeProbability = 0;
 
   while (randomNumber >= cumulativeProbability) {
@@ -60,6 +57,7 @@ const image3 = document.createElement('img');
 const gifImage = document.createElement('img');
 const tryAgainButton = document.createElement('button');
 const videoPlayer02 = document.getElementById('videoPlayer02');
+const videoPlayer03 = document.getElementById('videoPlayer03');
   
 function resetGame() {
     div3.removeChild(image);
@@ -73,8 +71,12 @@ function resetGame() {
     document.body.style.backgroundImage = 'url("696c1346c27df162ecd95129ff4ea552.jpg")';
     videoPlayer02.currentTime = 0
     videoPlayer02.pause();
-    videoPlayer02.style.visibility = 'hidden'
-    videoPlayer.addEventListener('ended', handleVideoEnd);
+    videoPlayer02.style.visibility = 'hidden';
+    videoPlayer03.currentTime = 0
+    videoPlayer03.pause();
+    videoPlayer03.style.visibility = 'hidden'
+
+        videoPlayer.addEventListener('ended', handleVideoEnd);
   };
 
 
@@ -150,19 +152,34 @@ if (gg === 'roxy' || gg == 'zenith') {
                               image3.src ='';
                               gifImage.src ='';
                            }else if(gg === 'kishirika'  || gg === 'ghislaine'){
-                               image2.src = '';
-                               image3.src = ''
-                           }else if(gg === 'sylphiette'){
-                                image3.src = ''
-                             }else if(gg === 'hilda'){
-                                  image3.src ='';
-                                  gifImage.src ='';
-                                  document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
-                                }else if (gg === 'ariel' ) {
-                                      gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
-                                      document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
-                                      image3.src = '';
-                                    }
+                                image2.src = '';
+                                 image3.src = ''
+                             }else if(gg === 'sylphiette'){
+                                   image3.src = ''
+                               }else if(gg === 'hilda'){
+                                     image3.src ='';
+                                     gifImage.src ='';
+                                     document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                  }else if (gg === 'ariel' ) {
+                                        gifImage.src = `../your wifu is runnig from u/gif/${gg}.png`;
+                                        document.body.style.backgroundImage = `url("../your wifu is runnig from u/back-image/back-${gg}.png")`;
+                                        image3.src = '';
+                                   }else if(gg === 'lilia'){
+                                          gifImage.src = '';
+                                          image3.src = ''
+                                          image2.src = '';
+                                      }else if(gg === 'nina'){
+                                            image3.src = '';
+                                            gifImage.src = ``;
+                                            document.body.style.backgroundImage = ``;
+                                            videoPlayer03.style.display = 'block';
+                                            videoPlayer03.style.visibility = 'visible'
+                                            videoPlayer03.play();
+                                       }else if(gg === 'sara'){
+                                        image3.src = '';
+                                        gifImage.src ='';
+                                        document.body.style.backgroundImage =  `url("../your wifu is runnig from u/back-image/back-${gg}.png")`
+                                       }
 
 
     div.appendChild(gifImage);
