@@ -95,12 +95,17 @@ function handleVideoEnd(){
     name.classList.add('animate__animated', 'animate__shakeY','animate__infinite' )
   
     image.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}.png`;
-    image2.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}2.png`;
-    image3.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}3.png`;
     image.classList.add('animate__animated', 'animate__fadeInBottomRight');
     image.classList.add('image');
+    image.loading = "lazy"; // Add the loading attribute here
+
+    image2.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}2.png`;
     image2.classList.add('animate__animated', 'animate__fadeInBottomRight' , 'image2');
+    image2.loading = "lazy"; // Add the loading attribute here
+
+    image3.src = `../your-wifu-is-runnig-from-u/imag/${gg}/${gg}3.png`;
     image3.classList.add('animate__animated', 'animate__fadeInBottomRight', 'image3');
+    image3.loading = "lazy"; // Add the loading attribute here
 
     gifImage.src = `../your-wifu-is-runnig-from-u/gif/${gg}.gif`;
     gifImage.style.width = '300px';
