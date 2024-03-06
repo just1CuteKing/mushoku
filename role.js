@@ -37,11 +37,12 @@ function randomWifu() {
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
   
-playButton.addEventListener('click', function () {
+document.body.addEventListener('keydown',(event) => {
+  if(event.key === 'Enter'){
     playButton.style.display = 'none';
     videoPlayer.style.display = 'block';
     videoPlayer.play();
-    
+  }
   });
 
 const main = document.getElementById("myElement");
@@ -77,6 +78,9 @@ function resetGame() {
     videoPlayer03.style.visibility = 'hidden'
 
         videoPlayer.addEventListener('ended', handleVideoEnd);
+    playButton.style.display = 'block';
+    videoPlayer.style.display = 'none';
+    videoPlayer.pause();
   };
 
 
@@ -85,7 +89,6 @@ function handleVideoEnd(){
     videoPlayer.style.display = 'none';
 
     const gg = randomWifu();
-    console.log('Random wifu:', gg);
   
     document.body.style.backgroundImage = `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.gif")`;
     document.body.style.backgroundRepeat = 'no-repeat';
@@ -186,23 +189,21 @@ if (gg === 'roxy' || gg == 'zenith') {
                                         document.body.style.backgroundImage =  `url("../your-wifu-is-runnig-from-u/back-image/back-${gg}.png")`
                                        }
 
-
     div.appendChild(gifImage);
     div2.appendChild(name);
     div3.appendChild(image);
     div4.appendChild(image2);
     div6.appendChild(image3);
-    if(image.src === '' && image3.src ===''){
-     
-    }
 
     tryAgainButton.textContent = 'Try Again';
     tryAgainButton.classList.add('try-again-button');
     tryAgainButton.addEventListener('click',resetGame);
+    
+    document.body.appendChild(tryAgainButton);
 
     document.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {resetGame()}});
-    document.body.appendChild(tryAgainButton);
+      if (event.key === 'Enter') {resetGame()}});
+
 }   
 videoPlayer.addEventListener('ended', handleVideoEnd);
 
