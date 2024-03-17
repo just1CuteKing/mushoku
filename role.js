@@ -36,12 +36,14 @@ function randomWifu() {
 
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
-  
+function start(){
+  playButton.style.display = 'none';
+  videoPlayer.style.display = 'block';
+  videoPlayer.play();
+}
 document.body.addEventListener('keydown',(event) => {
   if(event.key === 'Enter'){
-    playButton.style.display = 'none';
-    videoPlayer.style.display = 'block';
-    videoPlayer.play();
+   start();
   }
   });
 
