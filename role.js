@@ -29,10 +29,10 @@ function randomWifu() {
         cumulativeProbability += probability;
         if (randomNumber < cumulativeProbability) {
             return randomWifu;
-        }
-    }
-}
-}
+        };
+    };
+};
+};
 
 const playButton = document.getElementById('playButton');
 const videoPlayer = document.getElementById('videoPlayer');
@@ -40,11 +40,11 @@ function start(){
   playButton.style.display = 'none';
   videoPlayer.style.display = 'block';
   videoPlayer.play();
-}
+};
 document.body.addEventListener('keydown',(event) => {
   if(event.key === 'Enter'){
    start();
-  }
+  };
   });
 
 const main = document.getElementById("myElement");
